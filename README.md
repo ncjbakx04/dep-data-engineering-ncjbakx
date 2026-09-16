@@ -32,3 +32,15 @@ The dashboard should help the audience quickly see whether rice imports are beco
 - Coverage: Annual Philippine rice import volume in metric tons from 2016 to 2024, grouped into 15 country-of-origin categories.
 - Why it could still work: The table contains the yearly supplier volumes needed to rank origin countries and calculate the top-three supplier share without relying on the UN Comtrade API.
 - Known limitations: It ends in 2024, is annual rather than monthly, and provides volume but not trade value. Published totals may also differ slightly from the sum of displayed countries because of rounding or grouped categories.
+
+## First Data Pull
+
+Run the ingestion script from the project root:
+
+```powershell
+python scripts/ingest.py
+```
+
+The raw response is saved to:
+
+`data/raw/un_comtrade_ph_rice_imports_2025.json`
